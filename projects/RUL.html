@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio-1</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" >
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    
+  </header>
+
+  <main class="main">
+    <!-- About Section -->
+    <section id="rul-prediction" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Remaining Useful Life Prediction of Aircraft Engines Using Machine Learning</h2>
+        <p>Industrial AI | RNN, LSTM, SVR, CNN, XGBoost | Python, MATLAB</p>
+      </div>
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 justify-content-center">
+    
+          <div class="col-lg-12 content">
+    
+            <h3 class="fw-bold mb-3">Project Overview</h3>
+            <p>
+              This research focused on developing machine learning models to predict the Remaining Useful Life (RUL) of aircraft engines. The study used run-to-failure data from 260 simulated engines operating across six flight regimes, aiming to predict how many cycles remain before an engine reaches end of life. Accurate RUL prediction plays a vital role in predictive maintenance, cost reduction, and operational safety in aviation systems.
+            </p>
+    
+            <h3 class="fw-bold mt-5 mb-3">Data & Preparation</h3>
+            <ul>
+              <li>Dataset included 260 historical engine units for training and 100 units for testing</li>
+              <li>Each unit experienced six operating regimes characterized by altitude, speed, and power settings</li>
+              <li>Sensor selection performed to identify signals strongly correlated with degradation (e.g., pressure ratio, temperature)</li>
+              <li>Data preprocessing included regime-based normalization, batching, and labeling with computed RUL values</li>
+            </ul>
+    
+            <h3 class="fw-bold mt-5 mb-3">Machine Learning Models Used</h3>
+    
+            <h5 class="text-primary mt-3">Recurrent Neural Network (RNN)</h5>
+            <ul>
+              <li>Implemented in MATLAB using the Levenberg–Marquardt method</li>
+              <li>Trained on raw, unprepared data as a reference baseline</li>
+              <li>Performed well with final RMSE of 34.22</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">Long Short-Term Memory (LSTM)</h5>
+            <ul>
+              <li>Developed in Python with tuned memory cells and gate configurations</li>
+              <li>Outperformed all other models with lowest RMSE of 28.23 (mean prediction)</li>
+              <li>Showed robust performance even in noisy early-life data</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">Support Vector Regression (SVR)</h5>
+            <ul>
+              <li>Grid search and 10-fold cross-validation used for optimal hyperparameter tuning</li>
+              <li>Offered competitive performance with RMSE of 28.66</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">1-D Convolutional Neural Network (1D-CNN)</h5>
+            <ul>
+              <li>Model designed to extract temporal features from engine sensor sequences</li>
+              <li>Achieved RMSE of 32.16 with good predictions near end-of-life regions</li>
+            </ul>
+    
+            <h5 class="text-primary mt-3">Extreme Gradient Boosting (XGBoost)</h5>
+            <ul>
+              <li>Implemented with tree-based depth control and regularization</li>
+              <li>Achieved average performance with highest RMSE of 37.58 (final prediction)</li>
+            </ul>
+    
+            <h3 class="fw-bold mt-5 mb-3">Results & Model Comparison</h3>
+            <p>
+              All models were evaluated using both their final prediction and an average of their last five predictions. The LSTM model achieved the best performance overall. SVR and 1D-CNN models showed strong predictions for low RUL regions, which is critical for timely maintenance actions. The RNN model, despite using raw data, delivered reasonable accuracy, serving as a benchmark.
+            </p>
+    
+            <table class="table table-bordered table-striped mt-4">
+              <thead class="table-light">
+                <tr>
+                  <th>Model</th>
+                  <th>RMSE (Mean Prediction)</th>
+                  <th>RMSE (Final Prediction)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>LSTM</td><td>28.23</td><td>28.89</td></tr>
+                <tr><td>SVR</td><td>28.66</td><td>33.59</td></tr>
+                <tr><td>XGBoost</td><td>32.00</td><td>37.58</td></tr>
+                <tr><td>1D-CNN</td><td>32.16</td><td>33.57</td></tr>
+                <tr><td>RNN</td><td>33.66</td><td>34.22</td></tr>
+              </tbody>
+            </table>
+    
+            <h3 class="fw-bold mt-5 mb-3">Conclusions & Future Work</h3>
+            <ul>
+              <li>LSTM and SVR showed highest reliability in predicting end-of-life conditions</li>
+              <li>Data preprocessing significantly improved model performance, particularly for SVR and CNN</li>
+              <li>Future work includes sensitivity analysis on data preparation methods and more rigorous grid search across all models</li>
+              <li>Exploring ensemble methods and early-cycle noise reduction may further reduce RMSE</li>
+            </ul>
+    
+            <h5 class="mt-4">Team Members: Brian O’Malley, Ashwin Sudarshan, Sai Dinesh Gelam</h5>
+          </div>
+    
+          <!-- Visuals -->
+          <div class="col-lg-12 mt-5">
+            <h3 class="fw-bold mb-4">Visuals & Model Workflows</h3>
+            <div class="row g-4">
+    
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Sensor selection.png" class="card-img-top" alt="LSTM Workflow">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Sensor selection</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Data preparation work flow.png" class="card-img-top" alt="RNN vs Actual">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Data preparation work flow.png</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/CNN work Flow.png" class="card-img-top" alt="XGBoost Error Profile">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">CNN work Flow</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="../assets/img/Prediction and Ground truth.png" class="card-img-top" alt="XGBoost Error Profile">
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Prediction and Ground truth</p>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+    
+          <!-- Optional Video Section -->
+          <!-- <div class="col-lg-12 mt-5">
+            <h3 class="fw-bold mb-3">Demo Video</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                  <video class="card-img-top" controls>
+                    <source src="../assets/videos/rul_prediction_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="card-body p-2">
+                    <p class="card-text text-center small">Aircraft Engine RUL Estimation Workflow</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h4 class="sitename">Sai Dinesh Gelam
+      <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
+      <div class="social-links d-flex justify-content-center">
+        <a href="mailto:gsdinesh1998@gmail.com"><i class="bi bi-envelope"></i></a>
+        
+        <!-- <a href="https://github.com/AbhinavB7"><i class="bi bi-github"></i></a> -->
+        <!-- <a href="../"><i class="bi bi-instagram"></i></a>
+        <a href="../"><i class="bi bi-skype"></i></a> -->
+        <a href="https://www.linkedin.com/in/saidineshgelam/"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <!-- <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
+        </div> -->
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="../#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
