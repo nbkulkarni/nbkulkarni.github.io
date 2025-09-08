@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electrical Characterization of MLCCs — Project</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Icons (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --accent: #0d6efd;
+      --ink: #122033;
+    }
+    html, body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); }
+    .hero {
+      background: linear-gradient(135deg, rgba(13,110,253,.08), rgba(13,110,253,.02));
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    .badge-chip { font-weight: 500; background: #f1f5f9; color: #0f172a; border: 1px solid #e2e8f0; }
+    .card { border: 1px solid rgba(0,0,0,.06); box-shadow: 0 6px 18px rgba(2,12,27,.06); }
+    .lead-compact { font-size: 1.05rem; }
+    .check-list li { margin: .4rem 0; }
+    .section-title { letter-spacing: .5px; }
+    .smallcaps { font-variant-caps: all-small-caps; letter-spacing: .6px; }
+    .metric { font-weight: 700; font-size: 1.15rem; }
+    .muted { color: #6b7280; }
+    .sticky-aside { position: sticky; top: 1rem; }
+    .img-thumb { aspect-ratio: 16/10; object-fit: cover; border-radius: .75rem; border: 1px solid rgba(0,0,0,.06); }
+    .kbd { background: #0f172a; color: #fff; padding: .15rem .5rem; border-radius: .35rem; font-size: .85em; }
+    .divider { height: 1px; background: rgba(0,0,0,.08); margin: 2rem 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Hero -->
+  <header class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h1 class="display-6 fw-bold mb-2">Electrical Characterization of <span class="text-primary">Multi‑Layer Ceramic Capacitors (MLCCs)</span></h1>
+          <p class="lead-compact mb-3">Vendor and case‑size evaluation using solderless high‑temperature fixtures, wide‑band frequency sweeps, and EIS/galvanostatic methods.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge badge-chip">Vendors × Case Sizes</span>
+            <span class="badge badge-chip">Solderless Fixture</span>
+            <span class="badge badge-chip">High Temperature</span>
+            <span class="badge badge-chip">Frequency Sweep</span>
+            <span class="badge badge-chip">EIS</span>
+            <span class="badge badge-chip">Potentiostatic</span>
+            <span class="badge badge-chip">Galvanostatic</span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card p-3 p-lg-4 sticky-aside">
+            <div class="d-flex align-items-center mb-2"><i class="bi bi-activity fs-4 text-primary me-2"></i><div class="smallcaps">At a glance</div></div>
+            <ul class="list-unstyled small mb-0">
+              <li class="d-flex justify-content-between"><span>Objective</span><span class="metric">Parts selection guidance</span></li>
+              <li class="d-flex justify-content-between"><span>Techniques</span><span class="metric">EIS + Pot/Galv</span></li>
+              <li class="d-flex justify-content-between"><span>Temperatures</span><span class="metric">3 setpoints</span></li>
+              <li class="d-flex justify-content-between"><span>Frequency</span><span class="metric">Wide‑band sweep</span></li>
+              <li class="d-flex justify-content-between"><span>Fixture</span><span class="metric">Solderless, high‑T</span></li>
+              <li class="d-flex justify-content-between"><span>Outputs</span><span class="metric">Dataset + guidance</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row gx-5 gy-5">
+
+        <!-- Main Content -->
+        <div class="col-lg-8">
+
+          <h2 class="section-title h4 fw-bold mb-3">Project Overview</h2>
+          <p>
+            Prepared a <strong>project proposal</strong> to evaluate MLCCs from multiple <strong>vendors</strong> and <strong>case sizes</strong> to support <em>parts selection</em> in
+            ripple‑current applications for the sponsor. Built a <strong>solderless, high‑temperature test fixture</strong> to accelerate measurements across a wide
+            frequency range and eliminate time‑consuming solder operations.
+          </p>
+
+          <div class="divider"></div>
+
+          <h3 class="h5 fw-bold mb-2">Rapid Solderless Test Fixture</h3>
+          <ul class="check-list">
+            <li>High‑temperature capable, designed for rapid MLCC swaps—<strong>no soldering required</strong>.</li>
+            <li>Stable contact geometry for reliable measurements across <strong>temperature</strong> and <strong>frequency</strong>.</li>
+            <li>Improved throughput and repeatability for screening multiple vendors/case sizes.</li>
+          </ul>
+
+          <h3 class="h5 fw-bold mt-4 mb-2">Measurement Campaign</h3>
+          <ul class="check-list">
+            <li><strong>Potentiostatic</strong> characterization at <strong>three temperatures</strong>.</li>
+            <li>Measured <strong>Capacitance (C)</strong>, <strong>Dissipation Factor (DF)</strong> vs. frequency, and <strong>Insulation Resistance (IR)</strong>.</li>
+            <li><strong>Electrochemical Impedance Spectroscopy (EIS)</strong> / <strong>galvanostat</strong> measurements to analyze <strong>impedance</strong> and <strong>phase angle</strong> over frequency.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h3 class="h5 fw-bold mb-2">Analysis Methods</h3>
+          <ul class="check-list">
+            <li>Frequency‑response evaluation of <strong>C</strong>, <strong>DF</strong>, <strong>IR</strong>, and <strong>impedance/phase</strong> trends vs. vendor and case size.</li>
+            <li>Comparison across the <strong>three temperature setpoints</strong> to capture thermal dependencies.</li>
+            <li>Structured dataset for downstream <strong>parts selection</strong> and reliability‑oriented screening.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2"><i class="bi bi-diagram-3 text-primary me-2"></i><h3 class="h6 fw-bold mb-0">Study Factors</h3></div>
+                  <ul class="small mb-0">
+                    <li><strong>Vendor</strong> × <strong>Case size</strong></li>
+                    <li><strong>Temperature</strong> (T₁, T₂, T₃)</li>
+                    <li><strong>Frequency</strong> sweep</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2"><i class="bi bi-tools text-primary me-2"></i><h3 class="h6 fw-bold mb-0">Tools & Techniques</h3></div>
+                  <div class="small">Solderless high‑T fixture, Impedance Analyzer (EIS), Galvanostat, LCR Meter, Thermal Chamber</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3 class="h5 fw-bold mb-2">Deliverables & Impact</h3>
+          <ul class="check-list">
+            <li><strong>Measurement dataset</strong> spanning vendors, sizes, temperatures, and frequency.</li>
+            <li><strong>Time savings</strong> and <strong>efficiency</strong> from solderless workflow.</li>
+            <li>Actionable <strong>selection guidance</strong> for ripple‑current applications.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <a class="btn btn-primary" href="#"><i class="bi bi-file-earmark-text me-2"></i>Download Proposal (PDF)</a>
+            <a class="btn btn-outline-secondary" href="#gallery"><i class="bi bi-images me-2"></i>Jump to Gallery</a>
+          </div>
+
+        </div>
+
+        <!-- Aside: Quick Facts / Links -->
+        <div class="col-lg-4">
+          <div class="card p-3 p-lg-4 sticky-aside">
+            <h3 class="h6 smallcaps mb-3"><i class="bi bi-grid-1x2 text-primary me-2"></i>Example Test Matrix</h3>
+            <table class="table table-sm align-middle mb-3">
+              <thead>
+                <tr class="text-muted small">
+                  <th>Vendor</th><th>Case</th><th>Temp</th><th>Freq</th>
+                </tr>
+              </thead>
+              <tbody class="small">
+                <tr><td>A</td><td>0603</td><td>T₁/T₂/T₃</td><td>10² → 10⁶ Hz</td></tr>
+                <tr><td>B</td><td>0805</td><td>T₁/T₂/T₃</td><td>10² → 10⁶ Hz</td></tr>
+                <tr><td>C</td><td>1206</td><td>T₁/T₂/T₃</td><td>10² → 10⁶ Hz</td></tr>
+              </tbody>
+            </table>
+            <p class="small muted mb-0">Replace ranges with your actual temperature and frequency spans.</p>
+          </div>
+
+          <div class="card p-3 p-lg-4 mt-4 sticky-aside">
+            <h3 class="h6 smallcaps mb-3"><i class="bi bi-link-45deg text-primary me-2"></i>Links</h3>
+            <ul class="small list-unstyled mb-0">
+              <li class="mb-2"><i class="bi bi-journal-text me-2"></i><a href="#" class="text-decoration-none">Proposal / Slide Deck</a></li>
+              <li class="mb-2"><i class="bi bi-cloud-arrow-down me-2"></i><a href="#" class="text-decoration-none">Raw Data (CSV)</a></li>
+              <li><i class="bi bi-envelope me-2"></i><a href="mailto:your.email@example.com" class="text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Gallery -->
+      <div id="gallery" class="mt-5">
+        <h2 class="section-title h4 fw-bold mb-3">Project Gallery</h2>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-4">
+            <img class="w-100 img-thumb" src="https://placehold.co/800x500/png" alt="Solderless high‑T fixture" />
+            <div class="small text-center mt-1">Solderless high‑T fixture</div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img class="w-100 img-thumb" src="https://placehold.co/800x500/png" alt="Frequency response example" />
+            <div class="small text-center mt-1">Frequency response example</div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img class="w-100 img-thumb" src="https://placehold.co/800x500/png" alt="Thermal chamber setup" />
+            <div class="small text-center mt-1">Thermal chamber setup</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-4"></div>
+
+    </div>
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div class="small">© <span id="yr"></span> Your Name • Reliability Engineering Portfolio</div>
+      <a href="#" class="btn btn-sm btn-outline-secondary"><i class="bi bi-arrow-up"></i> Back to top</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

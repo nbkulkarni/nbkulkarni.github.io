@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ripple Current Effects on MLCCs — Project</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Icons (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --accent: #0d6efd;
+      --ink: #122033;
+    }
+    html, body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); }
+    .hero {
+      background: linear-gradient(135deg, rgba(13,110,253,.08), rgba(13,110,253,.02));
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+    .badge-chip { font-weight: 500; background: #f1f5f9; color: #0f172a; border: 1px solid #e2e8f0; }
+    .card { border: 1px solid rgba(0,0,0,.06); box-shadow: 0 6px 18px rgba(2,12,27,.06); }
+    .lead-compact { font-size: 1.05rem; }
+    .check-list li { margin: .4rem 0; }
+    .section-title { letter-spacing: .5px; }
+    .smallcaps { font-variant-caps: all-small-caps; letter-spacing: .6px; }
+    .metric { font-weight: 700; font-size: 1.15rem; }
+    .muted { color: #6b7280; }
+    .sticky-aside { position: sticky; top: 1rem; }
+    .img-thumb { aspect-ratio: 16/10; object-fit: cover; border-radius: .75rem; border: 1px solid rgba(0,0,0,.06); }
+    .kbd { background: #0f172a; color: #fff; padding: .15rem .5rem; border-radius: .35rem; font-size: .85em; }
+    .divider { height: 1px; background: rgba(0,0,0,.08); margin: 2rem 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Hero -->
+  <header class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h1 class="display-6 fw-bold mb-2">Ripple Current Effects on <span class="text-primary">Multi‑Layer Ceramic Capacitors (MLCCs)</span></h1>
+          <p class="lead-compact mb-3">Reliability investigation under HALT conditions with automated data acquisition and multi‑factor analysis.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge badge-chip">HALT</span>
+            <span class="badge badge-chip">THB / HAST (context)</span>
+            <span class="badge badge-chip">Ripple Current</span>
+            <span class="badge badge-chip">Insulation Resistance (IR)</span>
+            <span class="badge badge-chip">LabVIEW Automation</span>
+            <span class="badge badge-chip">PSpice</span>
+            <span class="badge badge-chip">Process Capability</span>
+            <span class="badge badge-chip">ANOVA</span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card p-3 p-lg-4 sticky-aside">
+            <div class="d-flex align-items-center mb-2"><i class="bi bi-activity fs-4 text-primary me-2"></i><div class="smallcaps">At a glance</div></div>
+            <ul class="list-unstyled small mb-0">
+              <li class="d-flex justify-content-between"><span>Test duration</span><span class="metric">5000 hrs</span></li>
+              <li class="d-flex justify-content-between"><span>Stresses</span><span class="metric">Ripple I + Temp</span></li>
+              <li class="d-flex justify-content-between"><span>MLCC factors</span><span class="metric">Case size × Vendor</span></li>
+              <li class="d-flex justify-content-between"><span>Measurements</span><span class="metric">C, DF, IR, T, I<sub>ripple</sub></span></li>
+              <li class="d-flex justify-content-between"><span>Automation</span><span class="metric">LabVIEW</span></li>
+              <li class="d-flex justify-content-between"><span>Presented at</span><span class="metric">Sponsor & CALCE</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row gx-5 gy-5">
+
+        <!-- Main Content -->
+        <div class="col-lg-8">
+
+          <h2 class="section-title h4 fw-bold mb-3">Project Overview</h2>
+          <p>
+            Investigated the reliability impact of <strong>ripple current</strong> on <strong>MLCCs</strong> under highly accelerated life testing (<strong>HALT</strong>) conditions. The study targeted the
+            <em>insulation resistance (IR) drop</em> failure mechanism and evaluated sensitivity across <strong>case sizes</strong> and <strong>manufacturers</strong>.
+          </p>
+
+          <div class="divider"></div>
+
+          <h3 class="h5 fw-bold mb-2">Design of Experiments (DOE)</h3>
+          <ul class="check-list">
+            <li>Factor space: <strong>Case size</strong> (multiple), <strong>Manufacturer</strong> (multiple), <strong>Ripple current level</strong>, and <strong>Temperature</strong>.</li>
+            <li>Objective: quantify the effect of ripple current &amp; temperature on <strong>IR degradation</strong>, and capture interactions with physical size/vendor.</li>
+            <li>Outcome measures: <strong>Capacitance</strong>, <strong>Dissipation Factor</strong>, <strong>Insulation Resistance</strong>, <strong>temperature</strong>, and <strong>ripple current</strong>.</li>
+          </ul>
+
+          <h3 class="h5 fw-bold mt-4 mb-2">Automated Test Bench & Data Acquisition</h3>
+          <p class="mb-2">Built an integrated LabVIEW setup to eliminate instrument switching and sustain long‑duration testing.</p>
+          <ul class="check-list">
+            <li>Instrumentation: <strong>Function generators, DC power supplies, Op‑Amps, multiplexer, thermocouples</strong>.</li>
+            <li>Control & logging: <strong>LabVIEW</strong> for stimulus orchestration, channel selection, and synchronized data capture.</li>
+            <li>Throughput: continuous <span class="kbd">5000 hrs</span> of testing across units without operator intervention.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h3 class="h5 fw-bold mb-2">Analysis Methods</h3>
+          <ul class="check-list">
+            <li><strong>Electrical data analysis</strong> across time: trend and stability of C/DF/IR vs. stress.</li>
+            <li><strong>ANOVA</strong> to assess main effects and interactions (case size, current, manufacturer).</li>
+            <li><strong>Process capability</strong> and reliability metrics for IR degradation thresholds.</li>
+            <li><strong>Optical microscopy</strong> to correlate failure evidence with electrical degradation.</li>
+          </ul>
+
+          <h3 class="h5 fw-bold mt-4 mb-2">Key Findings</h3>
+          <ul class="check-list">
+            <li>Ripple current contributes to a <strong>decline in insulation resistance</strong> in MLCCs under HALT.</li>
+            <li>Effect magnitude is influenced by <strong>case size</strong>, <strong>applied current</strong>, and <strong>manufacturer</strong>.</li>
+            <li>Automated bench reduced handling risk and ensured <strong>consistent, high‑volume data</strong> collection.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2"><i class="bi bi-easel2 text-primary me-2"></i><h3 class="h6 fw-bold mb-0">Presentations</h3></div>
+                  <ul class="small mb-0">
+                    <li>Findings presented to <strong>project sponsor</strong>.</li>
+                    <li>Shared at the <strong>CALCE Consortium Reliability Symposium</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-2"><i class="bi bi-tools text-primary me-2"></i><h3 class="h6 fw-bold mb-0">Tools & Technologies</h3></div>
+                  <div class="small">LabVIEW, PSpice, Optical Microscopy, MATLAB / Python (data analysis), Multiplexed DAQ, Thermocouples, DC PSUs, Function Generators, Op‑Amps</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3 class="h5 fw-bold mb-2">Impact</h3>
+          <ul class="check-list">
+            <li>Provided <strong>evidence‑based guidance</strong> for MLCC selection under ripple‑rich environments.</li>
+            <li>Clarified <strong>vendor and case‑size sensitivities</strong> impacting IR under combined stresses.</li>
+            <li>Delivered an <strong>automatable methodology</strong> for long‑duration component screening.</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <a class="btn btn-primary" href="#"><i class="bi bi-file-earmark-text me-2"></i>Download Summary (PDF)</a>
+            <a class="btn btn-outline-secondary" href="#gallery"><i class="bi bi-images me-2"></i>Jump to Gallery</a>
+          </div>
+
+        </div>
+
+        <!-- Aside: Quick Facts / Links -->
+        <div class="col-lg-4">
+          <div class="card p-3 p-lg-4 sticky-aside">
+            <h3 class="h6 smallcaps mb-3"><i class="bi bi-diagram-3 text-primary me-2"></i>Test Matrix (Example)</h3>
+            <table class="table table-sm align-middle mb-3">
+              <thead>
+                <tr class="text-muted small">
+                  <th>Case</th><th>Vendor</th><th>Ripple (A)</th><th>Temp (°C)</th>
+                </tr>
+              </thead>
+              <tbody class="small">
+                <tr><td>0603</td><td>A</td><td>0.05 → 0.15</td><td>25 → 85</td></tr>
+                <tr><td>0805</td><td>B</td><td>0.05 → 0.20</td><td>25 → 105</td></tr>
+                <tr><td>1206</td><td>C</td><td>0.10 → 0.30</td><td>25 → 125</td></tr>
+              </tbody>
+            </table>
+            <p class="small muted mb-0">Customize this table to match your actual DOE ranges and levels.</p>
+          </div>
+
+          <div class="card p-3 p-lg-4 mt-4 sticky-aside">
+            <h3 class="h6 smallcaps mb-3"><i class="bi bi-link-45deg text-primary me-2"></i>Links</h3>
+            <ul class="small list-unstyled mb-0">
+              <li class="mb-2"><i class="bi bi-journal-text me-2"></i><a href="#" class="text-decoration-none">Poster / Slide Deck</a></li>
+              <li class="mb-2"><i class="bi bi-github me-2"></i><a href="#" class="text-decoration-none">LabVIEW Snippets (optional)</a></li>
+              <li><i class="bi bi-envelope me-2"></i><a href="mailto:your.email@example.com" class="text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Gallery -->
+      <div id="gallery" class="mt-5">
+        <h2 class="section-title h4 fw-bold mb-3">Project Gallery</h2>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-4">
+            <img class="w-100 img-thumb" src="https://placehold.co/800x500/png" alt="LabVIEW automated test bench" />
+            <div class="small text-center mt-1">Automated LabVIEW bench</div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img class="w-100 img-thumb" src="https://placehold.co/800x500/png" alt="Multiplexed measurement setup" />
+            <div class="small text-center mt-1">Multiplexed measurements</div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img class="w-100 img-thumb" src="https://placehold.co/800x500/png" alt="IR degradation trend vs. ripple current" />
+            <div class="small text-center mt-1">IR trend vs. ripple level</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-4"></div>
+
+    </div>
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div class="small">© <span id="yr"></span> Your Name • Reliability Engineering Portfolio</div>
+      <a href="#" class="btn btn-sm btn-outline-secondary"><i class="bi bi-arrow-up"></i> Back to top</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Failure Analysis Projects — Capacitors & Resistors</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    :root { --accent:#0d6efd; --ink:#122033; }
+    body { font-family:'Poppins', system-ui, sans-serif; color:var(--ink); }
+    .hero { background:linear-gradient(135deg,rgba(13,110,253,.08),rgba(13,110,253,.02)); border-bottom:1px solid rgba(0,0,0,.06);}
+    .badge-chip { font-weight:500; background:#f1f5f9; border:1px solid #e2e8f0; }
+    .card { border:1px solid rgba(0,0,0,.06); box-shadow:0 6px 18px rgba(2,12,27,.06);}
+    .section-title { letter-spacing:.5px; }
+    .divider { height:1px; background:rgba(0,0,0,.08); margin:2rem 0; }
+    .img-thumb { aspect-ratio:16/10; object-fit:cover; border-radius:.75rem; border:1px solid rgba(0,0,0,.06);}
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="hero py-5">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Failure Analysis of <span class="text-primary">Capacitors & Resistors</span></h1>
+    <p class="lead">Root cause investigations of Polymer Aluminum Hybrid Electrolytic Capacitors, MLCCs, and SMD Resistors with cross-sectional and non-destructive methods.</p>
+  </div>
+</header>
+
+<main class="py-5">
+  <div class="container">
+
+    <!-- Polymer Aluminum Hybrid -->
+    <h2 class="section-title h4 fw-bold mb-3">Polymer Aluminum Hybrid Electrolytic Capacitor Failure Analysis</h2>
+    <ul>
+      <li>Performed <strong>FMEA</strong> on loose and mounted capacitors using <strong>optical microscopy, X-ray, and insulation resistance</strong>.</li>
+      <li>Developed a <strong>cross-sectioning procedure</strong> preventing roll damage; identified <strong>Anode structure variations</strong> at the termination.</li>
+      <li>Found <strong>copper particles</strong> on the roll as the root cause of failure. Copper was also present in termination material — likely transferred during <strong>high-energy soldering</strong>, leading to <strong>shorting and explosion</strong>.</li>
+      <li>Documented <strong>end-to-end processes, methodologies, and results</strong> with full traceability, completing deliverables in <strong>2 months</strong>.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <!-- MLCC -->
+    <h2 class="section-title h4 fw-bold mb-3">MLCC Failure Analysis</h2>
+    <ul>
+      <li>Performed <strong>electrical isolation</strong> on PCB and analysis with <strong>optical microscopy</strong> and <strong>insulation resistance</strong>.</li>
+      <li>Applied <strong>non-destructive methanol test</strong>, followed by cross-sectioning, revealing <strong>cracks</strong> as the root cause of failure.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <!-- SMD Resistors -->
+    <h2 class="section-title h4 fw-bold mb-3">SMD Resistor Failure Analysis</h2>
+    <ul>
+      <li><strong>FMEA literature review</strong> identified <strong>corrosion at termination</strong> due to sulfur as a major failure mechanism.</li>
+      <li>Conducted <strong>electrical analysis</strong>, verifying solder joint trace issues with <strong>microscopy and FTIR</strong>.</li>
+      <li>Performed <strong>composition & surface analysis (EDS)</strong>; corrosion was evident in cross-sections at termination.</li>
+      <li>Observed <strong>gaps at termination</strong> causing failures with high resistance values during electrical testing.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <!-- Gallery -->
+    <h3 class="section-title h5 fw-bold mb-3">Gallery (Examples)</h3>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <img src="https://placehold.co/800x500/png" class="w-100 img-thumb" alt="Cross-section of capacitor roll"/>
+        <div class="small text-center mt-1">Capacitor Cross-Section</div>
+      </div>
+      <div class="col-md-4">
+        <img src="https://placehold.co/800x500/png" class="w-100 img-thumb" alt="Microscopy cracks in MLCC"/>
+        <div class="small text-center mt-1">MLCC Cracks</div>
+      </div>
+      <div class="col-md-4">
+        <img src="https://placehold.co/800x500/png" class="w-100 img-thumb" alt="SMD resistor corrosion"/>
+        <div class="small text-center mt-1">Resistor Corrosion</div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="py-4 border-top">
+  <div class="container small text-muted">
+    © <span id="yr"></span> Your Name • Reliability Engineering Portfolio
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
