@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMD Resistor Failure Analysis — Sulfur Corrosion at Termination</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root { --ink:#0f172a; --muted:#64748b; --line:#e5e7eb; --accent:#0d6efd; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); }
+    .hero { background: #fafafa; border-bottom: 1px solid var(--line); }
+    .lead { color: var(--muted); }
+    .section-title { margin-bottom: .25rem; }
+    .section-sub { color: var(--muted); margin-bottom: 1.25rem; }
+    .divider { height:1px; background:var(--line); margin:2rem 0; }
+    .muted { color: var(--muted); }
+    .callout { background:#f8fafc; border:1px solid var(--line); border-left:4px solid var(--accent); padding:1rem 1.25rem; border-radius:.5rem; }
+    .atglance { background:#fff; border:1px solid var(--line); border-radius:.5rem; }
+    .thumb { width:100%; height:220px; object-fit:cover; border:1px solid var(--line); border-radius:.5rem; }
+    .tight ul { margin-bottom: 0.5rem; }
+    .tbl { border:1px solid var(--line); border-radius:.5rem; overflow:hidden; }
+    .tbl table { margin:0; }
+    .figcap { font-size:.9rem; color:var(--muted); text-align:center; margin-top:.25rem; }
+    section { padding-top: 1rem; }
+  </style>
+
+</head>
+<body>
+<header class="hero py-5">
+  <div class="container">
+    <h1 class="h3 fw-semibold mb-2">SMD Resistor Failure Analysis</h1>
+    <p class="lead mb-0">FMEA, electrical validation, microscopy/FTIR/EDS, and cross‑sections revealed sulfur‑driven corrosion and termination gaps causing high resistance.</p>
+  </div>
+</header>
+
+<main class="py-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        
+<h2 class="section-title h5 fw-semibold">Objectives & Scope</h2>
+<ul>
+  <li>Validate sulfur‑related corrosion mechanisms at resistor terminations.</li>
+  <li>Quantify impact of termination discontinuities on elevated resistance.</li>
+  <li>Recommend construction/process changes for sulfur‑rich environments.</li>
+</ul>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Specimens & Conditions</h3>
+<div class="tbl mb-3">
+  <table class="table table-sm align-middle">
+    <thead class="table-light"><tr><th>Group</th><th>N</th><th>Env.</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Field Returns</td><td>18</td><td>Industrial</td><td>High sulfur exposure suspected</td></tr>
+      <tr><td>Warehouse Stock</td><td>12</td><td>Controlled</td><td>Baseline comparison</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Equipment</h3>
+<ul>
+  <li>4‑wire resistance measurement setup (ppm resolution).</li>
+  <li>Optical microscope; polishing & cross‑section prep.</li>
+  <li>FTIR for sulfur compound detection; EDS elemental mapping.</li>
+</ul>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Procedure</h3>
+<ol>
+  <li>Confirm symptom via precision resistance vs. spec.</li>
+  <li>Microscopy to document termination & solder joint integrity.</li>
+  <li>FTIR scans for sulfur species; EDS maps on cross‑sections for correlation.</li>
+</ol>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Results & Observations</h3>
+<ul>
+  <li>Corrosion at termination metallization consistent with sulfur pathways.</li>
+  <li><strong>Gaps/discontinuities</strong> at termination interface causing high resistance.</li>
+  <li>Field returns show stronger sulfur signatures than warehouse stock.</li>
+</ul>
+
+<div class="callout mb-3"><strong>Root Cause:</strong> Sulfur‑driven corrosion of termination metallization plus mechanical/assembly gaps at solder/termination interface.</div>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Recommendations</h3>
+<ul>
+  <li>Specify <strong>anti‑sulfur</strong> resistor constructions for at‑risk environments.</li>
+  <li>Consider conformal coating; tighten storage controls (sealed, desiccated).</li>
+  <li>Supplier PPAP updates: corrosion screening, EDS sampling, FTIR limits.</li>
+</ul>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Deliverables</h3>
+<ul>
+  <li>FA report with photographic evidence, FTIR spectra, EDS maps.</li>
+  <li>CAPA with supplier engagement and process changes.</li>
+</ul>
+
+      </div>
+      <div class="col-lg-4">
+        <div class="atglance p-3">
+          <div class="small text-uppercase text-muted mb-2">At a Glance</div>
+          <ul class="list-unstyled mb-0 tight">
+            <li class="d-flex justify-content-between"><span>Failure Mode</span><span>Termination Corrosion</span></li><li class="d-flex justify-content-between"><span>Impurity</span><span>Sulfur</span></li><li class="d-flex justify-content-between"><span>Electrical Symptom</span><span>High Resistance</span></li>
+          </ul>
+        </div>
+        <div class="mt-3">
+          <img class="thumb" src="https://placehold.co/800x500/png" alt="EDS sulfur mapping at termination" />
+          <div class="figcap">Fig. R1 — EDS sulfur mapping at termination interface.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="py-4 border-top mt-5">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div class="small">© <span id="yr"></span> Your Name • Reliability Engineering Portfolio</div>
+      <a href="#" class="btn btn-sm btn-outline-secondary">Back to top</a>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

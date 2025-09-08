@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MLCC Failure Analysis — PCB Isolation, NDT, and Cross‑Sectioning</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root { --ink:#0f172a; --muted:#64748b; --line:#e5e7eb; --accent:#0d6efd; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); }
+    .hero { background: #fafafa; border-bottom: 1px solid var(--line); }
+    .lead { color: var(--muted); }
+    .section-title { margin-bottom: .25rem; }
+    .section-sub { color: var(--muted); margin-bottom: 1.25rem; }
+    .divider { height:1px; background:var(--line); margin:2rem 0; }
+    .muted { color: var(--muted); }
+    .callout { background:#f8fafc; border:1px solid var(--line); border-left:4px solid var(--accent); padding:1rem 1.25rem; border-radius:.5rem; }
+    .atglance { background:#fff; border:1px solid var(--line); border-radius:.5rem; }
+    .thumb { width:100%; height:220px; object-fit:cover; border:1px solid var(--line); border-radius:.5rem; }
+    .tight ul { margin-bottom: 0.5rem; }
+    .tbl { border:1px solid var(--line); border-radius:.5rem; overflow:hidden; }
+    .tbl table { margin:0; }
+    .figcap { font-size:.9rem; color:var(--muted); text-align:center; margin-top:.25rem; }
+    section { padding-top: 1rem; }
+  </style>
+
+</head>
+<body>
+<header class="hero py-5">
+  <div class="container">
+    <h1 class="h3 fw-semibold mb-2">MLCC Failure Analysis</h1>
+    <p class="lead mb-0">Electrical isolation, methanol-based NDT, and cross‑sectioning identified internal cracking as the leakage driver on assemblies.</p>
+  </div>
+</header>
+
+<main class="py-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        
+<h2 class="section-title h5 fw-semibold">Objectives & Scope</h2>
+<ul>
+  <li>Localize board‑level leakage to specific MLCCs without global rework.</li>
+  <li>Confirm internal cracks via NDT and destructive verification.</li>
+  <li>Recommend layout/process mitigations for high‑strain regions.</li>
+</ul>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Specimens & Constraints</h3>
+<div class="tbl mb-3">
+  <table class="table table-sm align-middle">
+    <thead class="table-light"><tr><th>Assembly</th><th>Qty</th><th>Location</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Board A</td><td>8</td><td>VRM output filter</td><td>High thermal cycles</td></tr>
+      <tr><td>Board B</td><td>5</td><td>Sensor front‑end</td><td>Mechanical shock exposure</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Equipment</h3>
+<ul>
+  <li>Precision probe station for node isolation/lift.</li>
+  <li>LCR meter with guarded fixtures (IR/Cap/DF).</li>
+  <li>Metallographic cross‑sectioning tools & optical microscopy.</li>
+</ul>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Procedure</h3>
+<ol>
+  <li>Electrical isolation of suspect nodes; monitor IR at bias/temperature.</li>
+  <li>Methanol soak test (NDT): observe time‑dependent C/IR shifts.</li>
+  <li>Targeted cross‑section through dielectric and near terminations; document cracks.</li>
+</ol>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Results & Observations</h3>
+<ul>
+  <li>IR degradation correlated with methanol exposure on several MLCCs.</li>
+  <li>Cross‑sections show <strong>through‑dielectric cracks</strong> and edge chipping near terminations.</li>
+  <li>Strongest correlation near stiffeners/connectors (strain concentration).</li>
+</ul>
+
+<div class="callout mb-3"><strong>Root Cause:</strong> Assembly‑induced mechanical strain causing internal cracking of ceramic dielectric; exacerbated by layout constraints and handling.</div>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Recommendations</h3>
+<ul>
+  <li>Re‑evaluate pad/land pattern; use <strong>flexible termination</strong> MLCCs in high‑strain zones.</li>
+  <li>Tune reflow profiles; add post‑reflow handling SOPs and depanelization support.</li>
+  <li>Add process IR checks on critical nodes after reflow & vibration.</li>
+</ul>
+
+<h3 class="h6 fw-semibold mt-4 mb-2">Deliverables</h3>
+<ul>
+  <li>FA report with isolation schematics, IR trends, cross‑section imagery.</li>
+  <li>DFMEA addendum with updated control plan for strain‑prone regions.</li>
+</ul>
+
+      </div>
+      <div class="col-lg-4">
+        <div class="atglance p-3">
+          <div class="small text-uppercase text-muted mb-2">At a Glance</div>
+          <ul class="list-unstyled mb-0 tight">
+            <li class="d-flex justify-content-between"><span>Specimens</span><span>On‑board MLCCs</span></li><li class="d-flex justify-content-between"><span>NDT</span><span>Methanol Soak</span></li><li class="d-flex justify-content-between"><span>Signal</span><span>IR Degradation</span></li><li class="d-flex justify-content-between"><span>Root Cause</span><span>Internal Cracks</span></li>
+          </ul>
+        </div>
+        <div class="mt-3">
+          <img class="thumb" src="https://placehold.co/800x500/png" alt="Cross-section: internal cracking" />
+          <div class="figcap">Fig. M1 — Dielectric crack crossing internal electrodes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="py-4 border-top mt-5">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div class="small">© <span id="yr"></span> Your Name • Reliability Engineering Portfolio</div>
+      <a href="#" class="btn btn-sm btn-outline-secondary">Back to top</a>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
