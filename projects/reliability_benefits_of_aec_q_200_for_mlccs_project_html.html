@@ -138,18 +138,19 @@
         <!-- Aside: Quick Facts / Links -->
         <div class="col-lg-4">
           <div class="card p-3 p-lg-4 sticky-aside">
-            <h3 class="h6 smallcaps mb-3"><i class="bi bi-grid-1x2 text-primary me-2"></i>Example Test Matrix</h3>
+            <h3 class="h6 smallcaps mb-3"><i class="bi bi-grid-1x2 text-primary me-2"></i>Test Matrix</h3>
             <table class="table table-sm align-middle mb-3">
               <thead>
-                <tr class="text-muted small"><th>Status</th><th>Vendor</th><th>Lot</th><th>Stress</th></tr>
+                <tr class="text-muted small"><th>Status</th><th>Manufacturer</th><th>Lot</th><th>Stress</th></tr>
               </thead>
               <tbody class="small">
-                <tr><td>Qualified</td><td>A</td><td>L1/L2</td><td>125 °C, 2× V<sub>r</sub></td></tr>
-                <tr><td>Qualified</td><td>B</td><td>L1/L2</td><td>125 °C, 2× V<sub>r</sub></td></tr>
-                <tr><td>Commercial</td><td>C</td><td>L1/L2</td><td>125 °C, 2× V<sub>r</sub></td></tr>
+                <tr><td>Commercial</td><td>M1</td><td>1A</td><td>125 °C, 2× V<sub>r</sub></td></tr>
+                <tr><td>Qualified</td><td>M1</td><td>2A</td><td>125 °C, 2× V<sub>r</sub></td></tr>
+                <tr><td>Qualified</td><td>M2</td><td>3A</td><td>125 °C, 2× V<sub>r</sub></td></tr>
+                <tr><td>Commercial</td><td>M2</td><td>4A</td><td>125 °C, 2× V<sub>r</sub></td></tr>
               </tbody>
             </table>
-            <p class="small muted mb-0">Replace placeholders with your actual vendors, lots, and rating details.</p>
+            <p class="small muted mb-0">Each Test Board has 10 Commercial parts and 10 AECQ parts and a total of 100 parts are tested.</p>
           </div>
 
           <div class="card p-3 p-lg-4 mt-4 sticky-aside">
@@ -167,19 +168,23 @@
       <!-- Gallery -->
       <div id="gallery" class="mt-5">
         <h2 class="section-title h4 fw-bold mb-3">Project Gallery</h2>
-        <div class="row g-3">
-          <div class="col-sm-6 col-lg-4">
-            <img class="w-100 img-thumb" src="assets/img/AECQ-test-setup.png" alt="LabVIEW automation & fixtures" />
-            <div class="small text-center mt-1">LabVIEW automation & fixtures</div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <img class="w-100 img-thumb" src="assets/img/AECQ-test-board.png" alt="High‑temperature ribbon connectors" />
-            <div class="small text-center mt-1">High‑T ribbon connectors</div>
-          </div>
-          <div class="col-sm-6 col-lg-4">
-            <img class="w-100 img-thumb" src="https://placehold.co/800x500/png" alt="Microscopy correlation examples" />
-            <div class="small text-center mt-1">Microscopy correlation</div>
-          </div>
+        <div class="row mb-4"></div>
+            <div class="col-lg-8 mx-auto"></div>
+          <img class="w-100 img-thumb" src="../assets/img/AECQ-test-setup.png" alt="LabVIEW automation & fixtures" />
+          <div class="text-center mt-2 fs-5">LabVIEW automation & fixtures</div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto">
+          <img class="w-100 img-thumb" src="../assets/img/AECQ-test-board.png" alt="High‑temperature ribbon connectors" />
+          <div class="text-center mt-2 fs-5">High‑T Test Boards</div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto">
+          <img class="w-200 img-thumb" src="../assets/img/AECQ-Results.JPG" alt="AECQ Results for Capacitance" />
+          <div class="text-center mt-2 fs-5">ANOVA Results for Capacitance</div>
+            </div>
         </div>
       </div>
 
@@ -190,7 +195,7 @@
 
   <footer class="py-4 border-top">
     <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
-      <div class="small">© <span id="yr"></span> Your Name • Reliability Engineering Portfolio</div>
+      <div class="small">© <span id="yr"></span> Nikhil Bharadwaj • Reliability Engineering Portfolio</div>
       <a href="#" class="btn btn-sm btn-outline-secondary"><i class="bi bi-arrow-up"></i> Back to top</a>
     </div>
   </footer>
